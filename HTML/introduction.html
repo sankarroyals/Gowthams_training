@@ -1,0 +1,239 @@
+<!-- HTML CONTAINS IN HEIRARCHY HTML, HEAD , BODY , ELEMENTS, TAGS, ATTRIBUTES -->
+<!-- HTML file means a document -->
+<!-- HEAD used to specify links, title, e.t.c -->
+<!-- HTML tags are case insensitive -->
+
+
+<!-- Example block elements :  div, h1 , p , ul, li  -->
+<!-- Example inline elements :  img, span , a  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grandparent{
+            display: flex;
+            gap: 5px;
+        }
+        .son , .daughter {
+            display: flex;
+            gap: 5px;
+
+        }
+
+
+        .son .childrens {
+            background: red;
+        }
+
+        .childrens {
+            height: 20px;
+            width: 20px;
+            background: blue;
+            margin-bottom: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 style="text-align: center;"><strong>Block Elements</strong></h1>
+    <div>
+
+        <h1 style="border:1px solid green">Hi welcome</h1>
+        <h2>Hi welcome</h2>
+        <h3>hi welcome</h3>
+        <h4>hi welcome</h4>
+    </div>
+
+
+    <h1 style="text-align: center;"><strong>Inline Elements</strong></h1>
+    <span style="border:1px solid green">hi welcome</span>
+    <span>hi 2</span>
+    <hr>
+
+
+
+
+
+    <h1 style="text-align: center;"><strong>Text formatting</strong></h1>
+    <div>
+        <p>hi,<mark>Marked text here</mark>. Assumenda, nihil. </p>
+        <p>hi,<strong>Strong text</strong></p>
+        <p>hi,<b>Strong and bold text</b></p>
+        <p>hi,<i>Italic text</i></p>
+        <p><u>Underline text</u></p>
+
+        <p>Abbrevation hover on <abbr title="Hypertext markup language">HTML</abbr></p>
+
+        <p>Subscript HTML <sub>5</sub></p>
+        <p>Superscript 26 <sup>o</sup>C</p>
+
+    </div>
+
+
+    <hr>
+
+
+
+    <h1 style="text-align: center;"><strong>Anchor tags</strong></h1>
+    <div>
+        <div><a href="https://www.google.co.in/">Google</a></div>
+        <div><a href="https://www.google.co.in/" target="_blank">Google opens in new page</a></div>
+        <a href="tel:9912114088">Phone</a>
+        <div><a href="mailto:ysankarmukesh@gmail.com">Mail</a></div>
+
+    </div>
+    <hr>
+
+    <h1 style="text-align: center;"><strong>Unordered List and Ordered List Tags</strong></h1>
+    <h3>Ordered List</h3>
+    <div>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ol>
+
+
+        <h3>Ordered List default starting</h3>
+        <ol start="3">
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ol>
+
+        <h3>Ordered List default value for particular list</h3>
+        <ol start="3">
+            <li>Item 3</li>
+            <li value="7">Item 7</li>
+            <li>Item 5</li>
+        </ol>
+
+
+        <h3>Ordered List default types</h3>
+        <ol type="a">
+            <li>Item </li>
+
+            <li>Item </li>
+        </ol>
+
+
+
+        <h3>Ordered List default types</h3>
+        <ol type="A">
+            <li>Item </li>
+
+            <li>Item </li>
+        </ol>
+
+
+        <h3>Ordered List default types small Roman letters</h3>
+        <ol type="i">
+            <li>Item </li>
+
+            <li>Item </li>
+        </ol>
+
+
+        <h3>Ordered List default types Large Roman letters</h3>
+        <ol type="I">
+            <li>Item </li>
+
+            <li>Item </li>
+        </ol>
+    </div>
+    <hr>
+
+    <h3>Un Ordered List</h3>
+    <div>
+        <ul type="disc">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+    <hr>
+
+
+
+
+
+
+    <h3>Table Creation</h3>
+    <table border="1">
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Points</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td rowspan="2">sankar</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Gowtham</td>
+            <td>400</td>
+        </tr>
+    </table>
+    <hr>
+
+
+
+
+    <h1 style="text-align: center;"><strong>Classes and Ids</strong></h1>
+    <div class="grandparent">
+        <div class="son">
+
+            <div class="childrens" id="id1"></div>
+            <div class="childrens"></div>
+            <div class="childrens"></div>
+
+
+        </div>
+        <div class="daughter">
+            <div class="childrens"></div>
+            <div class="childrens"></div>
+
+        </div>
+    </div>
+    <hr>
+
+
+
+    <h1 style="text-align: center;"><strong>Selection</strong></h1>
+    <select name="" id="">
+        <option value="">Select state</option>
+        <option value="Andhra">Andhra</option>
+        <option value="Karnataka">Karnataka</option>
+    </select>
+    <hr>
+
+
+    <h1 style="text-align: center;"><strong>Input</strong></h1>
+    <label for="textbox">Text Label</label>
+    <input type="text" name="" id="textbox" placeholder="Textbox" disabled>
+    <input type="color" name="" id="">
+    <input type="file" name="" id="">
+
+    <input type="range" name="" id="">
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
