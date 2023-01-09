@@ -1,0 +1,35 @@
+                            LOCAL GIT SETUP
+
+
+git init                               ===> intialize git
+git add .                              ===>  staging all changes
+git add <file name>                    ==> staging particular file
+git commit -m "Messages"               ===> giving valid message for staged files
+
+
+                         ONLINE   GITHUB SETUP
+
+git remote add <REMOTE_NAME>  <REMOTE_LINK>
+git branch -M main
+git push -u origin main
+
+
+                          SENDING GIT TO GITHUB
+
+git add .                     
+git commit -m "Messages" 
+git push                                  =====> push to the origin
+
+
+                        BRANCH CREATION AND PUSHING
+
+git checkout -b <branch_name>             ======> create new branch and checkout to that branch
+git checkout <branch_name>                ======> checkout to existing branch
+git branch -d <branch_name>               ======> Delete the branch
+git push -u set-upstream <branch_name>    ======> push this branch to the origin
+
+
+
+git pull                                  =====> fetch changes from online github
+
+
