@@ -33,3 +33,10 @@ git push -u set-upstream <branch_name>    ======> push this branch to the origin
 git pull                                  =====> fetch changes from online github
 
 
+
+
+                                REMOTE COMMANDS
+git remote -v                            =====> checking remote names
+
+git remote remove <remote_name>
+
