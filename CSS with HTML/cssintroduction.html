@@ -1,0 +1,119 @@
+<!-- Priorities ====> !important > inline style > internal > external    -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Tutorial</title>
+    <style>
+        /* universal selector */
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+
+
+        /* Styling using tag name */
+        h1 {
+            color: blue;
+        }
+
+        /* style using class  */
+        .h1 {
+            color: red;
+        }
+
+        /* style using id */
+        #h1 {
+            color: green !important;
+        }
+
+
+       
+
+        
+
+        
+    
+   
+        
+/*
+   > ====> direct children
+   + ====> immediate one neighbour
+   ~ ====> all neighbours
+
+*/
+
+.combi > p{
+    color: blue;
+}
+
+
+/* 
+to style first child use first-child
+to style nth child use 
+
+nth-child(<number>)
+    
+*/
+
+.combi div p:nth-child(2){
+    color: green;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Combinators -->
+    <div class="combi">
+        <p>1</p>
+        <div>
+            <p>2</p>
+            <p>3</p>
+        </div>
+        <p>4</p>
+        <p>5</p>
+    </div>
+
+
+
+    <!-- Fonts -->
+    <div>
+        <h1 style="text-align: center;"><strong>Fonts</strong></h1>
+        <p style="font-size: 35px; font-weight: 600;">This text is used for demonstrate font-size and font-weight</p>
+        <p style="font-style: italic;">This text is rendered in italic</p>
+        <p style="font-variant: small-caps;">this text is rendered in small caps</p>
+
+    </div>
+
+
+    <hr>
+
+    <!-- TEXT -->
+    <div>
+        <h1 style="text-align: center;"><strong>Text</strong></h1>
+        <p style="color:green;">This text is used for demonstrate color</p>
+        <p style="direction: rtl;">This text is used for demonstatrate text direction</p>
+        <p style="letter-spacing: 5px;">this text is for letter spacing</p>
+        <p style="word-spacing: 10px;">this text is for word spacing</p>
+        <p style="text-align: center;">this is for text align</p>
+    </div> 
+
+
+
+    <hr>
+
+
+  
+
+</body>
+
+</html>
