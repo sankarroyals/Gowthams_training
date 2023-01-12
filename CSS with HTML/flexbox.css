@@ -1,0 +1,93 @@
+.parent {
+    border: 1px solid red;
+
+
+    width: 900px;
+
+    padding: 10px;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    gap: 20px;
+}
+
+.box {
+    color: white;
+    background: green;
+    height: 100px;
+    width: 100px;
+}
+
+
+
+.parent2{
+    border: 1px solid red;
+    width: 1100px;
+    padding: 10px;
+    height: 500px;
+    display: flex;
+    gap: 5px;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: center;           */
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+   
+   
+}
+
+
+
+
+
+.parent3{
+    border: 1px solid red;
+    width: 1100px;
+    padding: 10px;
+    height: 500px;
+    display: flex;
+    gap: 5px;
+    /* flex-direction: column; */
+   align-items: center;
+   justify-content: center;
+   /* align-items: flex-start; */
+   /* align-items: flex-end; */
+   
+   
+   
+}
+
+.parent3 .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.parent4{
+    border: 1px solid red;
+    width: 1100px;
+    padding: 10px;
+    height: 500px;
+    display: flex;
+    gap: 5px;
+   
+
+   
+}
+
+/* Default value for flex-grow is 0  and flex-shrink is 1 */
+/* flex: flex-grow flex-shrink flex-basis; */
+.parent4 .box:first-child{
+    /* flex-grow: 1; */
+/* flex-basis: 200px; */
+
+    
+    /* flex:1 0 auto; */
+}
+.parent4 .box:nth-child(2){
+    /* flex-grow: 3; */
+}
