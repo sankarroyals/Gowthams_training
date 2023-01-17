@@ -1,0 +1,124 @@
+.FlexContainer {
+    width: 700px;
+    border: 1px solid green;
+    padding:20px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    
+}
+
+.row1 {
+    display: flex;
+    gap: 30px;
+}
+
+.row1_box1,
+.row1_box2 {
+
+    width: 400px;
+    height: 100px;
+    background: #D9D9D9;
+
+}
+
+
+.row1_box1{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0px 100px; */
+
+}
+.row1_box1 > div{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+}
+
+.row2{
+    display: flex;
+    gap: 30px;
+}
+.row2_box1{
+    width: 200px;
+    height: 100px;
+    background: #D9D9D9;
+}
+.row2_box2{
+    height: 100px;
+    background: #D9D9D9;
+   flex-grow: 1;
+   flex-basis: auto;
+}
+
+
+
+.row3{
+    display: flex;
+    gap: 30px;
+}
+
+.left{
+    width: 200px;
+    height: 100px;
+    background: #D9D9D9;
+
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: space-between;
+}
+
+.right1_row3{
+    background: #D9D9D9;
+    height: 40px;
+   
+}
+
+.right2_row3{
+display: flex;
+gap: 20px;
+}
+
+.right2_row3 > div{
+    background: #D9D9D9;
+    height: 40px;
+    flex: 1 0 auto;
+}
+
+.left{
+    display: flex;
+gap: 20px;
+flex-direction: column;
+}
+.left > div{
+    background: red;
+    flex: 1 0 auto;
+   
+}
+
+
+
+
+.row4{
+    background: #D9D9D9;
+    height: 100px;
+    flex: 1 0 auto;
+}
+
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 1px solid blue;
+
+}
