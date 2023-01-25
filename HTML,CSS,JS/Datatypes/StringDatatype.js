@@ -91,6 +91,54 @@ console.log(a===b);  // false because it is strict comparision
 
 
 
+// charAt and charCodeAt
+name = "sankar"
+console.log(name[1]);
+console.log(name.charAt(1));
+console.log(name.charCodeAt(1));        // give ascii number
+
+
+
+// spaces removing using trim(), trimLeft()
+
+let sentence  = "   Hi im sankar here   "+"hi"
+console.log(sentence);
+console.log(sentence.trim());
+console.log(sentence.trimEnd());
+console.log(sentence.trimStart())
+
+
+//  split advance
+
+let arrayTypeString = "one, two, three"
+console.log(arrayTypeString.split());
+console.log(arrayTypeString.split(","));
+
+
+
+
+//  indexOf , 
+let text = "Hi im there what about you"
+console.log(text.indexOf("i"))
+console.log(text.lastIndexOf("i"));
+console.log(text.indexOf("what"))
+console.log(text.indexOf("gowtham"));               // -1
+
+
+// includes
+console.log(text.includes("gowtham"))
+console.log(text.includes("hi"))
+
+
+// replace 
+text = text.replace("Hi","bye")
+console.log(text);
+
+
+console.log(text.toUpperCase())
+console.log(text.toLowerCase());
+
+
 
 
 
