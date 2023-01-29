@@ -111,12 +111,12 @@ const socialMediaProfile = [
     },
     {
         "name":"gowtham",
-        "age":20,
+        "age":21,
         "username":"gowtham@1"
     },
     {
         "name":"mukesh",
-        "age":20,
+        "age":22,
         "username":"mukesh@1"
     }
 ]
@@ -128,4 +128,24 @@ socialMediaProfile.map(social =>
        social.username === logginedUser ?  console.log(social)  :  ""
     }
 )
+
+// map
+
+const mapArray = socialMediaProfile.map(social => {return social})
+
+console.log(mapArray)
+
+// filter 
+const filterArray  = socialMediaProfile.filter(social=>{
+    return social.username === logginedUser
+})
+console.log(filterArray);
+
+
+// reduce
+const reduceArray = socialMediaProfile.reduce((x,y)=>{
+    return x.age+y.age
+})
+console.log(reduceArray)
+
 
