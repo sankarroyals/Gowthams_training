@@ -21,7 +21,8 @@ console.log(document.all[6].classList);
 
 
 const changeBgToYellow = () =>{
-    document.body.classList.add('bodyClass3');
+    // document.body.classList.add('bodyClass3');
+    document.body.style.background="green"
 }
 
 const changeBgToBlack = () =>{
@@ -32,6 +33,12 @@ const changeBgToBlack = () =>{
 const changeBgToggle = () =>{
     document.body.classList.toggle('bodyClass3');
 }
+
+
+
+
+
+
 
 
 
