@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div style="display: flex;align-items: center;">
+            <div><img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt=""></div>
+            <div><span class="navText">Keep</span> </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="todoAddingBox">
+            <input type="text" class="titleinput" placeholder="Title" >
+
+            <ul class="ulContainer">
+                    <li>Sankar <i class="fa-solid fa-trash"></i></li>
+            </ul>
+           
+
+            <div style="display: flex;gap:5px;  border-bottom: 1px solid #f1f3f4;align-items: center;">
+
+                <div><input type="text" class="todoListItems" placeholder="List Item"></div>
+                <div style="margin-left: 10px; color: #989b9c; cursor: pointer;" onclick="addingList(event)"><i class="fa-solid fa-plus"></i></div>
+            </div>
+
+
+            <div style="display: flex;justify-content: flex-end;gap: 10px;padding: 10px;">
+                <button>Add</button>
+                <button>Delete</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+</body>
+<script src="todo.js"></script>
+</html>
