@@ -20,16 +20,20 @@
 .container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    
+
 }
-.todoAddingBox{
+.todoAddingBox,.listOfTodos{
   
     border:2px solid #f1f3f4;
 
     width: 500px;
     min-height: 120px;
     /* padding: 10px; */
-    margin-top: 30px;
+    margin-top: 30px !important;
     border-radius: 10px;
+    margin: auto;
     
 }
 .titleinput{
@@ -68,4 +72,32 @@ li{
     padding: 12px;
     display: flex;
     justify-content: space-between;
+}
+
+
+
+
+
+/* New one */
+
+.title,.pending,.completed{
+    width:100%;
+    padding:8px 15px;
+}
+
+
+.tasks{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.completed >.tasks{
+    margin-top: 8px;
+}
+
+.compl{
+    text-decoration: line-through;
 }
