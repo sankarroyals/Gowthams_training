@@ -24,7 +24,7 @@ const createlist = (listItem,id) => {
   const liElement = document.createElement("li");
   liElement.textContent = listItem;
   liElement.setAttribute("id",id)
-  console.log(liElement)
+  
 
 
 //    creating and appending deleteIcons into list
@@ -35,19 +35,25 @@ const createlist = (listItem,id) => {
 
 
 
-  // document.getElementsByClassName("ulContainer")[0].appendChild(liElement);
+  document.getElementsByClassName("ulContainer")[0].appendChild(liElement);
 
-  // listItemValue.value = "";
+  listItemValue.value = "";
 };
 
 
 
 const deleteData = (event) => {
   console.log(event.target.parentElement.getAttribute('id'))
+  console.log(listItem[event.target.parentElement.getAttribute('id')])
 
-   
-    
-    
- 
- 
+  listItem.splice(event.target.parentElement.getAttribute('id'), 1)
+
+  document.getElementsByClassName("ulContainer")[0].innerHTML = ""
+  
+  for(let i=0;i<listItem.length;i++){
+
+    createlist(listItem[i],i);
+  }
+
+
 };
