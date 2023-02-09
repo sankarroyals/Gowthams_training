@@ -4,18 +4,14 @@ const listItemValue = document.getElementsByClassName("todoListItems")[0];
 let listItem = [];
 
 const addingList = (event) => {
-      //  it is used for id
-  let newDate = new Date()
+  
   
 
   listItem.push(listItemValue.value);
   
 //   Emptying the ul container before adding list due to avoid duplicates
   document.getElementsByClassName("ulContainer")[0].innerHTML = ""
-
-
   
-
   for(let i=0;i<listItem.length;i++){
 
     createlist(listItem[i],i);
@@ -28,6 +24,7 @@ const createlist = (listItem,id) => {
   const liElement = document.createElement("li");
   liElement.textContent = listItem;
   liElement.setAttribute("id",id)
+  console.log(liElement)
 
 
 //    creating and appending deleteIcons into list
@@ -38,27 +35,18 @@ const createlist = (listItem,id) => {
 
 
 
-  document.getElementsByClassName("ulContainer")[0].appendChild(liElement);
+  // document.getElementsByClassName("ulContainer")[0].appendChild(liElement);
 
-  listItemValue.value = "";
+  // listItemValue.value = "";
 };
 
 
 
 const deleteData = (event) => {
+  console.log(event.target.parentElement.getAttribute('id'))
 
-    const presentId = event.target.parentElement.getAttribute('id')
+   
     
-    listItem = listItem.filter((li,index)=>{return index != presentId})
-
-    document.getElementsByClassName("ulContainer")[0].innerHTML = ""
-    for(let i=0;i<listItem.length;i++){
-  
-      createlist(listItem[i],i);
-    }
-
-    
-    console.log(listItem);
     
  
  
