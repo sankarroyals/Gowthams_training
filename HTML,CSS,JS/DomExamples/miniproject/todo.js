@@ -57,3 +57,30 @@ const deleteData = (event) => {
 
 
 };
+
+
+
+
+// adding todos in localstorage
+
+const addTodo = (event) =>{
+  
+
+  const data = {"title": titleHead.value, "pending": listItem, "completed": [] }
+
+  if(localStorage.getItem("data")){
+    const localdata = JSON.parse(localStorage.getItem("data"))
+    localdata.push(data)
+    localStorage.setItem("data",JSON.stringify((localdata)))
+  }
+
+  else{
+    localStorage.setItem("data",JSON.stringify([data]))
+  }
+
+
+  // removing title, listitem, ulContainer from screen to add new data
+  titleHead.value = ""
+  listItem = []
+  document.getElementsByClassName("ulContainer")[0].innerHTML = ""
+}
