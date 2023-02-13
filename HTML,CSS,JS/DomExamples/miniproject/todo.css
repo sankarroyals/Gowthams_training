@@ -20,16 +20,19 @@
 .container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    
 }
-.todoAddingBox{
+.todoAddingBox , .listOfTodos{
   
-    border:2px solid #f1f3f4;
+    border:2px solid #9c9ea0;
 
     width: 500px;
     min-height: 120px;
     /* padding: 10px; */
-    margin-top: 30px;
+    margin-top: 30px !important;
     border-radius: 10px;
+    margin: auto;
     
 }
 .titleinput{

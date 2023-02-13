@@ -1,6 +1,30 @@
 const titleHead = document.getElementsByClassName("titleinput")[0];
 const listItemValue = document.getElementsByClassName("todoListItems")[0];
 
+
+
+
+const localStorageTodos = () =>{
+  document.getElementById("listOfTodosContainer").innerHTML = ""
+
+
+  if(localStorage.getItem("data")){
+    const data = JSON.parse(localStorage.getItem("data"))
+
+    data.map((d,index)=>{
+      const listOfTodos = document.createElement('div')
+      listOfTodos.setAttribute("class","listOfTodos")
+      document.getElementById("listOfTodosContainer").appendChild(listOfTodos)
+
+    })
+
+  }
+}
+localStorageTodos()
+
+
+
+
 let listItem = [];
 
 const addingList = (event) => {
@@ -78,9 +102,11 @@ const addTodo = (event) =>{
     localStorage.setItem("data",JSON.stringify([data]))
   }
 
-
+  
   // removing title, listitem, ulContainer from screen to add new data
   titleHead.value = ""
   listItem = []
   document.getElementsByClassName("ulContainer")[0].innerHTML = ""
+
+  localStorageTodos()
 }
