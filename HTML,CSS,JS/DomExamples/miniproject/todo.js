@@ -12,8 +12,20 @@ const localStorageTodos = () =>{
     const data = JSON.parse(localStorage.getItem("data"))
 
     data.map((d,index)=>{
+      console.log(d)
       const listOfTodos = document.createElement('div')
       listOfTodos.setAttribute("class","listOfTodos")
+
+      const titles = document.createElement('div')
+      titles.setAttribute("class","title")
+      titles.textContent = d.title
+
+      listOfTodos.appendChild(titles)
+      
+
+
+
+
       document.getElementById("listOfTodosContainer").appendChild(listOfTodos)
 
     })

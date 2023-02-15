@@ -72,3 +72,8 @@ li{
     display: flex;
     justify-content: space-between;
 }
+
+
+.title{
+    padding: 8px 15px;
+}
