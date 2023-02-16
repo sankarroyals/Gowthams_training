@@ -11,8 +11,8 @@ const localStorageTodos = () =>{
   if(localStorage.getItem("data")){
     const data = JSON.parse(localStorage.getItem("data"))
 
-    data.map((d,index)=>{
-      console.log(d)
+    data.map((d,indexi)=>{
+     
       const listOfTodos = document.createElement('div')
       listOfTodos.setAttribute("class","listOfTodos")
 
@@ -21,11 +21,21 @@ const localStorageTodos = () =>{
       titles.textContent = d.title
 
       listOfTodos.appendChild(titles)
+
+
+      // pending div creation
+      const pendingDiv = document.createElement('div')
+      pendingDiv.setAttribute('class','pending')
+
+      d.pending.map((dp,indexj)=>{
+        
+      })
       
 
-
-
-
+      listOfTodos.appendChild(pendingDiv)
+      
+      
+      // appending listoftodos
       document.getElementById("listOfTodosContainer").appendChild(listOfTodos)
 
     })

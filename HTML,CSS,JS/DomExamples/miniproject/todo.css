@@ -1,31 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.navbar{
+
+.navbar {
     min-height: 60px;
-    border:2px solid #f1f3f4;
+    border: 2px solid #f1f3f4;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.navText{
+
+.navText {
     font-size: 22px;
     font-weight: 500;
     color: #5f6368;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
+
 }
-.todoAddingBox , .listOfTodos{
-  
-    border:2px solid #9c9ea0;
+
+.todoAddingBox,
+.listOfTodos {
+
+    border: 2px solid #9c9ea0;
 
     width: 500px;
     min-height: 120px;
@@ -33,9 +37,10 @@
     margin-top: 30px !important;
     border-radius: 10px;
     margin: auto;
-    
+
 }
-.titleinput{
+
+.titleinput {
     padding: 15px;
     width: 100%;
     border: none;
@@ -43,15 +48,15 @@
     border-bottom: 1px solid #f1f3f4;
 }
 
-.todoListItems{
+.todoListItems {
     padding: 10px 15px;
     width: 100%;
     border: none;
     outline: 0;
-   
+
 }
 
-button{
+button {
     padding: 5px 10px;
     border-radius: 5px;
     background: blue;
@@ -62,11 +67,12 @@ button{
 
 
 
-ul{
+ul {
     list-style: none;
-    
+
 }
-li{
+
+li {
     color: #949697;
     padding: 12px;
     display: flex;
@@ -74,6 +80,14 @@ li{
 }
 
 
-.title{
+.title {
     padding: 8px 15px;
+}
+
+
+.tasks {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 3px;
+    margin-left: 15px;
 }
