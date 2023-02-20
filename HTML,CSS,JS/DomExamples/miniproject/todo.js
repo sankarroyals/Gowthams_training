@@ -2,6 +2,36 @@ const titleHead = document.getElementsByClassName("titleinput")[0];
 const listItemValue = document.getElementsByClassName("todoListItems")[0];
 
 
+const addToCompleted = (event) =>{
+  console.log("entire data position",event.target.name,"value inside pending",event.target.id)
+  const data = JSON.parse(localStorage.getItem('data'))
+  console.log(data[event.target.name]);    
+
+  data[event.target.name].completed.push(data[event.target.name].pending[event.target.id])
+
+  data[event.target.name].pending.splice(event.target.id,1)
+  
+  localStorage.setItem("data",JSON.stringify((data)))
+
+  localStorageTodos()
+
+}
+
+
+const addToPending = (event) =>{
+  console.log("entire data position",event.target.name,"value inside pending",event.target.id)
+  const data = JSON.parse(localStorage.getItem('data'))
+
+  data[event.target.name].pending.push(data[event.target.name].completed[event.target.id])
+  data[event.target.name].completed.splice(event.target.id,1)
+
+  localStorage.setItem("data",JSON.stringify((data)))
+
+
+  localStorageTodos()
+
+
+}
 
 
 const localStorageTodos = () =>{
@@ -28,11 +58,17 @@ const localStorageTodos = () =>{
       pendingDiv.setAttribute('class','pending')
 
       d.pending.map((dp,indexj)=>{
+        
         const tasks  =  document.createElement('div')
         tasks.setAttribute('class','tasks')
+       
 
         const inputTag =  document.createElement('input')
         inputTag.setAttribute('type','checkbox')
+        inputTag.setAttribute('name',indexi)
+        inputTag.setAttribute('id', indexj)
+        
+        inputTag.setAttribute('onclick','addToCompleted(event)')
 
 
         const contentdiv =  document.createElement('div')
@@ -44,9 +80,54 @@ const localStorageTodos = () =>{
         pendingDiv.appendChild(tasks)
 
       })
-      
-
       listOfTodos.appendChild(pendingDiv)
+
+
+
+      const completedDiv = document.createElement('div')
+      completedDiv.setAttribute('class','completed')
+
+      const completedTitle = document.createElement('div')
+      completedTitle.textContent = "completed"
+
+      if(d.completed.length>0){
+        completedDiv.appendChild(completedTitle)
+      }
+
+
+
+      d.completed.map((dp,indexj)=>{
+        
+        const tasks  =  document.createElement('div')
+        tasks.setAttribute('class','tasks')
+       
+
+        const inputTag =  document.createElement('input')
+        inputTag.setAttribute('type','checkbox')
+        inputTag.setAttribute('name',indexi)
+        inputTag.setAttribute('id', indexj)
+        inputTag.setAttribute('checked','true')
+        
+        inputTag.setAttribute('onclick','addToPending(event)')
+
+
+        const contentdiv =  document.createElement('div')
+        contentdiv.textContent = dp
+
+       
+        tasks.appendChild(inputTag)
+        tasks.appendChild(contentdiv)
+        completedDiv.appendChild(tasks)
+
+      })
+
+      
+     
+      listOfTodos.appendChild(completedDiv)
+
+
+
+      
       
       
       // appending listoftodos

@@ -80,9 +80,11 @@ li {
 }
 
 
-.title {
+.title,.completed > div:first-child {
     padding: 8px 15px;
 }
+
+
 
 
 .tasks {
