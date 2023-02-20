@@ -28,7 +28,21 @@ const localStorageTodos = () =>{
       pendingDiv.setAttribute('class','pending')
 
       d.pending.map((dp,indexj)=>{
-        
+        const tasks  =  document.createElement('div')
+        tasks.setAttribute('class','tasks')
+
+        const inputTag =  document.createElement('input')
+        inputTag.setAttribute('type','checkbox')
+
+
+        const contentdiv =  document.createElement('div')
+        contentdiv.textContent = dp
+
+       
+        tasks.appendChild(inputTag)
+        tasks.appendChild(contentdiv)
+        pendingDiv.appendChild(tasks)
+
       })
       
 
