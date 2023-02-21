@@ -212,7 +212,7 @@ const addTodo = (event) =>{
   if(localStorage.getItem("data")){
     const localdata = JSON.parse(localStorage.getItem("data"))
     localdata.push(data)
-    localStorage.setItem("data",JSON.stringify((localdata)))
+    localStorage.setItem("data",JSON.stringify(localdata))
   }
 
   else{
