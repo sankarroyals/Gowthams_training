@@ -7,8 +7,7 @@ const Demo = () => {
 
   const [data2, setData2] = useState([]);
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  
 
   const changeName = (e) => {
     console.log(e.target);
@@ -24,9 +23,7 @@ const Demo = () => {
     document.getElementById("textValue").value = "";
   };
 
-  const emailandPassword = (e) => {
-    console.log({ email: email, password: password });
-  };
+ 
 
   return (
     <div>
@@ -48,23 +45,7 @@ const Demo = () => {
 
 
       
-      <div style={{ marginTop: "30px" }}>
-        <div>
-          <input
-            type="text"
-            id="email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            id="password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button onClick={(e) => emailandPassword(e)}>Submit</button>
-      </div>
+    
     </div>
   );
 };
