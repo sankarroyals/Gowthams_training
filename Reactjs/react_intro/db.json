@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Food",
+      "pending": ["burger","sandwich"],
+      "completed":[]
+    },
+    {
+      "id": 2,
+      "title": "Workouts",
+      "pending": ["Pushups","pullups"],
+      "completed":[]
+    }
+  ]
+}

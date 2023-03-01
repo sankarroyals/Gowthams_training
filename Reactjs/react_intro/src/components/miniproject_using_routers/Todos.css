@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.todoAddingBox {
+
+    border: 2px solid #9c9ea0;
+
+    width: 500px;
+    min-height: 120px;
+    /* padding: 10px; */
+    margin-top: 30px !important;
+    border-radius: 10px;
+
+    /* makes div center */
+    margin: auto;     
+
+}
+
+.titleinput{
+    padding: 15px;
+    width: 100%;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+
+.todoListItems {
+    padding: 10px 15px;
+    width: 100%;
+    border: none;
+    outline: 0;
+
+}
+
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: blue;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+ul {
+    list-style: none;
+
+}
+
+li {
+    color: #949697;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}

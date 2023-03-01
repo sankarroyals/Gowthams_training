@@ -14,9 +14,10 @@ const Navbar = () => {
         gap: "10px",
       }}
     >
-      <div><Link to="/">Demo</Link></div>
-      <div><Link to="/form">Forms</Link></div>
-      <div><Link to="/useEffectExample">UseEffectExample</Link></div>
+      <div ><Link to="/" style={{color:"white"}}>Demo</Link></div>
+      <div><Link to="/form" style={{color:"white"}}>Forms</Link></div>
+      <div><Link to="/useEffectExample" style={{color:"white"}}>UseEffectExample</Link></div>
+      <div><Link to="/todos" style={{color:"white"}}>Todos</Link></div>
     </div>
    </div>
   );
