@@ -3,14 +3,21 @@
     {
       "id": 1,
       "title": "Food",
-      "pending": ["burger","sandwich"],
-      "completed":[]
+      "pending": [
+        "sandwich"
+      ],
+      "completed": [
+        "burger"
+      ]
     },
     {
       "id": 2,
       "title": "Workouts",
-      "pending": ["Pushups","pullups"],
-      "completed":[]
+      "pending": [
+        "Pushups",
+        "pullups"
+      ],
+      "completed": []
     }
   ]
 }

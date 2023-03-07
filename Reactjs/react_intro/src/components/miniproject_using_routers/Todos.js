@@ -12,6 +12,9 @@ const Todos = () => {
 
   const [data,setData] = useState([])
 
+
+  const [trigger,setTrigger] = useState(false)
+
   const addingList = (e) => {
     setListItem([...listItem, listValue]);
     setListValue("");
@@ -29,7 +32,7 @@ const Todos = () => {
       setData(res.data)
     })
 
-  },[])
+  },[trigger])
 
 
 
@@ -38,6 +41,37 @@ const Todos = () => {
     console.log(newdata)
     setListItem([...newdata])
   }
+
+
+
+  const addToCompleted = (e,data) =>{
+
+    // console.log(e.target.getAttribute("name"), e.target.getAttribute('id'), data)
+    // console.log(data)
+
+    data.completed.push(data.pending[e.target.getAttribute('id')])
+   
+
+    const pendingFilter = data.pending.filter((d,i)=>{return + i !== + e.target.getAttribute('id')})
+    console.log(pendingFilter)
+
+    const newdata = {...data, pending:[...pendingFilter] }
+    axios.put(`http://localhost:3000/todos/${data.id}`,newdata ).then(res=>{
+      // console.log(res.data);
+      setTrigger(!trigger)
+    })
+
+  }
+
+
+  const addToPending = (e) =>{
+
+
+
+    
+  }
+
+
 
   return (
     <div>
@@ -100,32 +134,31 @@ const Todos = () => {
         
         <div id="listOfTodosContainer">
 
-            {data.map((d,index)=>(
+            {data.map((d,indexi)=>(
               <div class="listOfTodos">
-                <div class="title">Food</div>
+                <div class="title">{d.title}</div>
                 <div class="pending">
-                    <div class="tasks"  >
-                        <input type="checkbox" onclick="addToCompleted(event)" name="0" id="0" />
-                        <div>gowtham</div>
+                {d.pending.map((p,indexj)=>(
+                  <div class="tasks" >
+                        <input type="checkbox" onClick={e=>addToCompleted(e,d)} name={indexi} id={indexj} />
+                        <div>{p}</div>
                     </div>
-                    <div class="tasks">
-                        <input type="checkbox" name="" id="" />
-                        <div>sankar</div>
-                    </div>
+                ))}
+                   
+                   
 
                 </div>
 
                 
                 <div class="completed">
-                    <div>Completed</div>
-                    <div class="tasks"  >
-                        <input type="checkbox" checked onclick="addToPending(event)" name="0" id="0" />
-                        <div>gowtham</div>
-                    </div>
+                   {d.completed.length>0 && <div>Completed</div>}
+                   {d.completed.map((c,indexj)=>(
                     <div class="tasks">
-                        <input type="checkbox" checked name="" id="" />
-                        <div>sankar</div>
+                        <input type="checkbox" checked onClick={e=>addToPending(e)} name="0" id="0" />
+                        <div>{c}</div>
                     </div>
+                   ))}
+                    
 
                 </div>
 
