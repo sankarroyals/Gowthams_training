@@ -42,6 +42,23 @@
 
 }
 
+.listOfTodos{
+    position: relative;
+}
+
+.listOfTodosDelete{
+    position: absolute;
+    right: 0;
+    top:-10px;
+    color: red;
+    cursor: pointer;
+    display: none;
+}
+
+.listOfTodos:hover .listOfTodosDelete{
+display: block;
+}
+
 .titleinput {
     padding: 15px;
     width: 100%;
