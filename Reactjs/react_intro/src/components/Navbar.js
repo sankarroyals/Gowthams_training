@@ -1,7 +1,12 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { AllProducts } from "../redux/actions/ProductsAction";
 
 const Navbar = () => {
+ 
+
   return (
    <div style={{ padding: "10px",
    height: "40px",
@@ -18,6 +23,7 @@ const Navbar = () => {
       <div><Link to="/form" style={{color:"white"}}>Forms</Link></div>
       <div><Link to="/useEffectExample" style={{color:"white"}}>UseEffectExample</Link></div>
       <div><Link to="/todos" style={{color:"white"}}>Todos</Link></div>
+      <div><Link to="/products" style={{color:"white"}}>Products</Link></div>
     </div>
    </div>
   );
