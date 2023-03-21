@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Todos from "./components/miniproject_using_routers/Todos";
 import ProductsList from "./components/redux_example/products/ProductsList";
 import Login from "./components/redux_example/Login/Login";
+import SingleProduct from "./components/redux_example/products/SingleProduct";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
            <Route path="/todos" element={<Todos />} />
            <Route path="/products" element={<ProductsList />} />
            <Route path="/login" element={<Login />} />
+           <Route path="/product/:id" element={<SingleProduct />} />
         </Routes>
       </BrowserRouter>
     </div>

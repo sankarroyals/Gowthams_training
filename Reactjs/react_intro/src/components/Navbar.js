@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { AllProducts } from "../redux/actions/ProductsAction";
+
 
 const Navbar = () => {
  
